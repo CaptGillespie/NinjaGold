@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ninja Gold</title>
+</head>
+<body>
+<div class="container">
+  <h1>Ninja Gold!</h1>
+  <h5>Your Gold:<span class="goldAmount">{{Gold}}</span></h5>
+  <div class="buttons">
+    <button (click)="Job()"><h3>Get A Day Job</h3></button>
+    <p>3-7 Gold</p>
+  </div>
+  <div class="buttons">
+      <button (click)="Dragon()"><h3>Dragon Tamer</h3></button>
+      <p>5-10 Gold</p>
+  </div>
+  <div class="buttons">
+      <button (click)="Pet()"><h3>Pet Therapist</h3></button>
+      <p>15-20 Gold</p>
+  </div>
+  <div class="buttons">
+      <button (click)="Casino()"><h3>Trip to the Casino</h3></button>
+      <p>+- 50 Gold</p>
+  </div>
+<br>
+<br>
+<h2>Activity Log</h2>
+<div class="activity">
+  <h5>Activity log data here</h5>
+  <div *ngFor="let a of Activity">
+    <p>{{a}}</p>
+  </div>
+
+</div>
+
+
+</div>
+</body>
+</html>
+
+
+
+<style>
+button{
+  background-color: blue;
+  color: white;
+  border: 2px solid gold;
+  margin: 5px;
+  box-shadow: 2px 2px grey;
+}
+.goldAmount{
+  font-size: 50px;
+  color: gold;
+}
+.activity{
+  width: 400px;
+  height: 300px;
+  outline: 2px solid black;
+  margin-left: 37%;
+  padding: 10px;
+}
+h1{
+  color: green;
+}
+h2{
+  color: red;
+}
+p{
+  outline: 2px solid gold;
+  margin: 5px;
+}
+.container{
+  padding: 25px;
+  text-align: center;
+}
+.buttons{
+display: inline-block;
+width: 100px;
+text-align: center;
+}
+</style>
